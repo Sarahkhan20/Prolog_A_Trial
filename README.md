@@ -157,5 +157,41 @@ So Let's Get Started,
     
 Till now of This Tut, we haven't came accross terminology 'backward chaining', but we have already experienced it. Prolog was designed keeping backward chaining in mind for Clausal Execution to understand better.
          
+  #### Imperitive Control Flow-Cut.
+  Director says, CUT! yeah something similar here too. But make sure this is used carefully by only understanding what will Cut Do and not just experimenting and playing around.
+  
+        teaches(kumkum,stacks).
+        teaches(kumkum,queues).
+        teaches(kumkum,hashing).
+        teaches(suneeta,sorting).
+
+        studies(sarah,queues).
+        studies(altaf,queues).
+        studies(anas,hashing).
+        studies(ninad,sorting).
+        
+   Query,
+        
+        ?- teaches(kumkum,Course), studies(Student,Course).
+        
+   Backtracking is not stopped in any way, shape or form over here.
+   Course is in beginning bound to *Stacks* in the first fact, but there aren't any students so backtracking takes place and Course get bounds to *queues*, and next goal is tried and 2 answers are found. Here, suneeta and ninad are ignored by the way because the query makes it clear that only kumkum's courses are to be checked.
+   Let's try with Cut,
+   
+       ?- teaches(kumkum,Course),!,studies(Student,Course).
+       
+  This time the course was bound to stacks, then the cut is executed and then  studies goal is tried and fails cause according to database noone studies stacks. Because of cut, we cannot backtrack to the teaches goal, so the whole query fails and returs False.Similarly, Try this and infer
+  
+       ?- teaches(kumkum,Course),studies(Student,Course),!.
+       
+  Here, the teaches goal is  tried as usual, and *Course* is bound to *stacks* as usual. Next the *studies* goal is tried and *fails* ( very ironic lol) so we don't get to the cut at the end of the query at this point, and backtracking can occur.
+  Thus, the teached goal is re-tried, and *Course* is bound to *queues*. Then the studies goal is re-tried, and *succeeds*. After that cut is executed so no backtracking.
+  
+       ?- !, teaches(kumkum,Course),studies(Student,Course).
+       
+  Acts as if no *cut* was present. Because it is never necessary to backtrack past the cut to find the next solution, so backtracking is never inhibited.
+  
+       
+  
       
      

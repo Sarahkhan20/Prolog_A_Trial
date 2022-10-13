@@ -191,7 +191,43 @@ Till now of This Tut, we haven't came accross terminology 'backward chaining', b
        
   Acts as if no *cut* was present. Because it is never necessary to backtrack past the cut to find the next solution, so backtracking is never inhibited.
   
-       
+  #### So it's time to do dive into prolog syntax more..
   
+  #### How to find factorial using recursion.
+  
+         factorial(0,1).
+         factorial(N,Ans) :-
+         N>0,
+         N1 is N-1,
+         factorial(N1, V),
+         Ans is N*V.
+         
+      ?- factorial(5,X).
+     
+     The ouput will be X=120.Prolog uses recursion to solve many number of problems like this.
+     
+   #### Find the area of rectangle and perimeter of rectangle
+     
+         rect:-
+         write('enter length'),
+         read(L),
+         write('enter breadth'),
+         read(B),
+         A is L*B,
+         P is 2*(L+B),
+         write('area of rect is:'),
+         write(A),nl,
+         write('perimeter of rect is: '),
+         write(P).
+         
+      So this is program will take the inputs from users using read() just like scanf in C programming / cin in C++ .
+      After taking the input it will be finding the area and perimeter using the formula .Output is shown below.
+      nl is used for newline.write is used for displaying something on screen just like printf in C programming.
       
+      enter length
+      3.
+      enter breadth
+      2.
+      area of rect is:6
+      perimeter of rect is: 10      
      

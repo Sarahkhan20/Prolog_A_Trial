@@ -5,5 +5,8 @@
  fork icon:
              ![fork](https://user-images.githubusercontent.com/98898049/197362503-6d346e2e-3320-45de-b6d3-185cd31fa155.png)
              
- **Step 3:** after making necessary changes,
+ **Step 3:** After making necessary changes,commit,add comments. Changes in your local repository and as I said it didn't affect this main repository.
+ Now, if you want to add here. All you gotta do is send me pull request.  How ? Let's see in Step 4.
+ 
+ **Step 4:** 
 

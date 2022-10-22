@@ -4,7 +4,7 @@
  
  PROLOG is a Declarative Programming Language. Here, "LOGIC" is shown in the form of *facts* and *rules*. It is used for solving Queries about relationships in any given data.
  
-Declarative statements are called Facts. These Facts are basically knowledge or Factbase of the system. We run Queries againsta the knowledge of this system. You will find the Queries and knowledge base quite similar to SQL or Databases and will perform something like this.
+Declarative statements are called Facts. These Facts are basically knowledge or Factbase of the system. We run Queries against the knowledge of this system. You will find the Queries and knowledge base quite similar to SQL or Databases and will perform something like this.
 Let us Get into the Hands-on PROLOG (A Trial). And oh btw, it's fun not something you usually do in programming. So yeah kinda you can see it as a Break from usual Routine.
 
 Before we Start,
@@ -14,7 +14,7 @@ Lemme Answer This:   Where can we write PROLOG?
 1. You can Download GNU PROLOG from [here](http://www.gprolog.org/) according to your requirements. OR
 2. Online Compiler like [Click me!](https://swish.swi-prolog.org/)
 
-I used Online Compiler. Downloading and installing will properly make you use semicolons and write queries from strach I felt cause I tried it in College Lab-session.
+I used Online Compiler. Downloading and installing will properly make you use semicolons and write queries from stratch I felt cause I tried it in College Lab-session.
 
   *Also One More Thing I ain't Teaching anyone here So this won't we me explaining sytax. I feel that comes naturally with observing and practice.*
   
@@ -37,7 +37,7 @@ So Let's Get Started,
         
         ?-sisters(mary,sarah).
         
-  What output did you see ? **False**. Hmm...Although Mary and Sarah are sister but your knowledgebase knows that sarah is mary's sister and it cannot implies the converse to be true.
+  What output did you see ? **False**. Hmm...Although Mary and Sarah are sisters but your knowledgebase knows that sarah is mary's sister and it cannot implies the converse to be true.
   Thus, Order of Evaluation in PROLOG goes from left to right.
     Now what I meant by not explainging syntax was, here for instance we used,
     
@@ -79,9 +79,9 @@ So Let's Get Started,
    
       ?- eats(joey,What). 
       
-   Note, what isn't an object it's a variable and variable always starts which Capital letter.
+   Note, what isn't an object it's a variable and **variable always starts which Capital letter.**
      
- Now think how you will write this and query.
+ Now think, How you will write this and query??
  
    * Men like joking.
    * Chandler is a men.
@@ -101,7 +101,7 @@ So Let's Get Started,
    * If it is a nice day Sarah smiles
    * if Sarah smiles she is happy.
   
-  Can be written as,
+ How will you write this?
   
   Before coming to lists,
   let's try this interesting PROLOG Arithmetics. (Queries)
@@ -155,7 +155,7 @@ So Let's Get Started,
   Try out different operators, it's fun.
   Now while looking at Execution Order of PROLOG it is similar as BODMAS. So no special rules here
     
-Till now of This Tut, we haven't came accross terminology 'backward chaining', but we have already experienced it. Prolog was designed keeping backward chaining in mind for Clausal Execution to understand better.
+Till now of This Tutorial, we haven't came accross terminology 'backward chaining', but we have already experienced it. Prolog was designed keeping backward chaining in mind for Clausal Execution to understand better.
          
   #### Imperitive Control Flow-Cut.
   Director says, CUT! yeah something similar here too. But make sure this is used carefully by only understanding what will Cut Do and not just experimenting and playing around.
@@ -204,7 +204,7 @@ Till now of This Tut, we haven't came accross terminology 'backward chaining', b
          
       ?- factorial(5,X).
      
-     The ouput will be X=120.Prolog uses recursion to solve many number of problems like this.
+ The ouput will be X=120. Prolog uses recursion to solve many number of problems like this.
      
    #### Find the area of rectangle and perimeter of rectangle
      
@@ -220,9 +220,9 @@ Till now of This Tut, we haven't came accross terminology 'backward chaining', b
          write('perimeter of rect is: '),
          write(P).
          
-      So this is program will take the inputs from users using read() just like scanf in C programming / cin in C++ .
-      After taking the input it will be finding the area and perimeter using the formula .Output is shown below.
-      nl is used for newline.write is used for displaying something on screen just like printf in C programming.
+ So this is program will take the inputs from users using read() just like scanf in C programming / cin in C++ .
+ After taking the input it will be finding the area and perimeter using the formula .Output is shown below.
+ nl is used for newline.write is used for displaying something on screen just like printf in C programming.
       
       enter length
       3.

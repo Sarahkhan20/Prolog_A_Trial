@@ -160,22 +160,22 @@ Till now of This Tutorial, we haven't came accross terminology 'backward chainin
   #### Imperitive Control Flow-Cut.
   Director says, CUT! yeah something similar here too. But make sure this is used carefully by only understanding what will Cut Do and not just experimenting and playing around.
   
-        teaches(kumkum,stacks).
-        teaches(kumkum,queues).
-        teaches(kumkum,hashing).
-        teaches(suneeta,sorting).
+               teaches(kumkum,stacks).
+               teaches(kumkum,queues).
+               teaches(kumkum,hashing).
+               teaches(kareena,sorting).
 
-        studies(sarah,queues).
-        studies(altaf,queues).
-        studies(anas,hashing).
-        studies(ninad,sorting).
+               studies(ninad,queues).
+               studies(altaf,queues).
+               studies(anas,hashing).
+               studies(sarah,sorting).
         
    Query,
         
         ?- teaches(kumkum,Course), studies(Student,Course).
         
    Backtracking is not stopped in any way, shape or form over here.
-   Course is in beginning bound to *Stacks* in the first fact, but there aren't any students so backtracking takes place and Course get bounds to *queues*, and next goal is tried and 2 answers are found. Here, suneeta and ninad are ignored by the way because the query makes it clear that only kumkum's courses are to be checked.
+   Course is in beginning bound to *Stacks* in the first fact, but there aren't any students so backtracking takes place and Course get bounds to *queues*, and next goal is tried and 2 answers are found. Here, kareena and sarah are ignored by the way because the query makes it clear that only kumkum's courses are to be checked.
    Let's try with Cut,
    
        ?- teaches(kumkum,Course),!,studies(Student,Course).

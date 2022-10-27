@@ -14,4 +14,4 @@ Code:-
 
 Queries:-
  
-           
+           rect.

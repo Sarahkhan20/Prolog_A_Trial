@@ -15,3 +15,7 @@ Code:-
 Queries:-
  
            rect.
+
+
+
+Try area and perimeter of circle 
